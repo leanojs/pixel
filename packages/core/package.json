@@ -1,8 +1,34 @@
 {
   "name": "@pixel/core",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "description": "Image optimize engine for Pixel — folder-aware, format-preserving PNG/JPEG/WebP",
   "type": "module",
+  "license": "Apache-2.0",
+  "author": "Leano",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanojs/pixel.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/leanojs/pixel#readme",
+  "bugs": {
+    "url": "https://github.com/leanojs/pixel/issues"
+  },
+  "keywords": [
+    "image",
+    "optimize",
+    "compress",
+    "png",
+    "jpeg",
+    "webp",
+    "sharp"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -17,12 +43,15 @@
     "dev": "tsc -p tsconfig.json --watch",
     "lint": "eslint src/",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "clean": "rm -rf dist"
+    "test": "vitest run",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
   }
 }
