@@ -30,7 +30,11 @@
   "bin": {
     "pixel": "./dist/index.js"
   },
-  "files": ["dist/index.js"],
+  "files": [
+    "dist/index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "rm -rf dist && node scripts/build.mjs",
     "dev": "node scripts/build.mjs --watch",
