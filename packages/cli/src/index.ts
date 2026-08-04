@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { OptimizeError } from "@pixel/core";
 
 import { runOptimize } from "./commands/optimize.js";

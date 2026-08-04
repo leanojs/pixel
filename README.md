@@ -108,8 +108,8 @@ pnpm pixel optimize ./path/to/images
 
 Monorepo packages:
 
-- `@pixel/core` — optimize engine
-- `pixel-cli` — CLI (`pixel` binary)
+- `@pixel/core` — internal optimize engine (private, bundled into the CLI)
+- `pixel-cli` — published CLI (`pixel` binary)
 
 ## License
 
