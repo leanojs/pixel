@@ -96,7 +96,7 @@ async function visit(
   }
 
   for (const entry of entries) {
-    // Skip dotfiles / dot-directories (includes atomic-write temps).
+    // Skip dotfiles / dot-directories (includes .skive-*.tmp atomic writes).
     if (entry.name.startsWith(".")) {
       continue;
     }

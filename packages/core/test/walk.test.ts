@@ -20,7 +20,7 @@ describe("walkImages", () => {
   });
 
   async function tempDir(): Promise<string> {
-    const dir = await mkdtemp(join(tmpdir(), "pixel-walk-"));
+    const dir = await mkdtemp(join(tmpdir(), "skive-walk-"));
     dirs.push(dir);
     return dir;
   }
@@ -63,7 +63,7 @@ describe("walkImages", () => {
   it("skips dotfiles", async () => {
     const root = await tempDir();
     await writeFile(join(root, "visible.png"), "png");
-    await writeFile(join(root, ".pixel-abc123.tmp"), "tmp");
+    await writeFile(join(root, ".skive-abc123.tmp"), "tmp");
     await writeFile(join(root, ".hidden.png"), "png");
 
     const entries = await walkImages(root);
@@ -72,7 +72,7 @@ describe("walkImages", () => {
   });
 
   it("throws WalkError when the root directory does not exist", async () => {
-    const missing = join(tmpdir(), "pixel-walk-missing", "nope");
+    const missing = join(tmpdir(), "skive-walk-missing", "nope");
 
     await expect(walkImages(missing)).rejects.toMatchObject({
       name: "WalkError",

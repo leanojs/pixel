@@ -1,6 +1,6 @@
 {
-  "name": "pixel-cli",
-  "version": "0.1.1",
+  "name": "skive-cli",
+  "version": "0.1.0",
   "description": "CLI to optimize image folders — format-preserving, structure-preserving, safe by default",
   "type": "module",
   "license": "Apache-2.0",
@@ -22,22 +22,22 @@
     "png",
     "jpeg",
     "webp",
-    "pixel"
+    "skive"
   ],
   "engines": {
     "node": ">=18"
   },
   "bin": {
-    "pixel": "./dist/index.js"
+    "skive": "./dist/index.js"
   },
   "files": [
-    "dist/index.js",
+    "dist",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "rm -rf dist && node scripts/build.mjs",
-    "dev": "node scripts/build.mjs --watch",
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
     "lint": "eslint src/",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
@@ -45,11 +45,10 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "sharp": "^0.33.5"
+    "skive-engine": "workspace:^"
   },
   "devDependencies": {
-    "@pixel/core": "workspace:*",
-    "esbuild": "^0.25.0",
+    "sharp": "^0.33.5",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9"
   }

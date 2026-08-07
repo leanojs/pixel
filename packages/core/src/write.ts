@@ -13,7 +13,7 @@ export async function writeAtomic(
   const dir = dirname(output);
   await mkdir(dir, { recursive: true });
 
-  const temp = join(dir, `.pixel-${randomBytes(8).toString("hex")}.tmp`);
+  const temp = join(dir, `.skive-${randomBytes(8).toString("hex")}.tmp`);
 
   try {
     await writeFile(temp, data);

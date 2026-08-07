@@ -1,5 +1,5 @@
 {
-  "name": "pixel",
+  "name": "skive",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -7,7 +7,7 @@
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
-    "pixel": "node packages/cli/dist/index.js",
+    "skive": "node packages/cli/dist/index.js",
     "clean": "turbo run clean"
   },
   "devDependencies": {

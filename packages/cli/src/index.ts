@@ -1,4 +1,6 @@
-import { OptimizeError } from "@pixel/core";
+#!/usr/bin/env node
+
+import { OptimizeError } from "skive-engine";
 
 import { runOptimize } from "./commands/optimize.js";
 import { CliUsageError, parseArgs, usageText } from "./parse-args.js";

@@ -1,4 +1,4 @@
-import type { ImageFormat } from "@pixel/core";
+import type { ImageFormat } from "skive-engine";
 
 export interface CliOptions {
   command: "optimize" | null;
@@ -98,7 +98,7 @@ export function parseArgs(argv: string[]): CliOptions {
     options.command = positionals[0] === "optimize" ? "optimize" : null;
     if (options.command === null && !options.help) {
       throw new CliUsageError(
-        `Unknown command '${positionals[0]}'. Try: pixel optimize <input>`,
+        `Unknown command '${positionals[0]}'. Try: skive optimize <input>`,
       );
     }
   }
@@ -138,7 +138,7 @@ function readNumber(argv: string[], index: number, flag: string): number {
 }
 
 export function usageText(): string {
-  return `Usage: pixel optimize <input> [options]
+  return `Usage: skive optimize <input> [options]
 
 Optimize a file or folder of images (png, jpeg, webp).
 

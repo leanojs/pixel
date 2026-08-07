@@ -31,7 +31,7 @@ describe("runOptimize", () => {
   });
 
   async function tempDir(): Promise<string> {
-    const dir = await mkdtemp(join(tmpdir(), "pixel-cli-"));
+    const dir = await mkdtemp(join(tmpdir(), "skive-cli-"));
     dirs.push(dir);
     return dir;
   }

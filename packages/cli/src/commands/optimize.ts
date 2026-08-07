@@ -7,7 +7,7 @@ import {
   optimizeFolder,
   type ImageFormat,
   type OptimizeFolderFileResult,
-} from "@pixel/core";
+} from "skive-engine";
 
 import {
   formatBytes,
@@ -31,7 +31,7 @@ export async function runOptimize(
   io: OptimizeIo = { stdout: process.stdout, stderr: process.stderr },
 ): Promise<number> {
   if (!options.input) {
-    throw new CliUsageError("Missing <input>. Try: pixel optimize ./public");
+    throw new CliUsageError("Missing <input>. Try: skive optimize ./public");
   }
 
   const input = resolve(options.input);

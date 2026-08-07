@@ -1,26 +1,26 @@
 <p align="center">
-  <img src="assets/readme-banner.svg" alt="Pixel — optimize image folders in one command" width="100%" />
+  <img src="assets/readme-banner.svg" alt="Skive — optimize image folders in one command" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/pixel-cli"><img src="https://img.shields.io/npm/v/pixel-cli.svg?style=flat-square" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/pixel-cli"><img src="https://img.shields.io/npm/dm/pixel-cli.svg?style=flat-square" alt="npm downloads" /></a>
+  <a href="https://www.npmjs.com/package/skive-cli"><img src="https://img.shields.io/npm/v/skive-cli.svg?style=flat-square" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/skive-cli"><img src="https://img.shields.io/npm/dm/skive-cli.svg?style=flat-square" alt="npm downloads" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square" alt="license" /></a>
   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg?style=flat-square" alt="node" /></a>
   <a href="https://github.com/leanojs/pixel"><img src="https://img.shields.io/github/stars/leanojs/pixel?style=flat-square" alt="GitHub stars" /></a>
 </p>
 
 <p align="center">
-  Optimize a folder of images in one command.<br />
+  <b>Skive</b> — cut a thin layer off your images.<br />
   Format-preserving by default · directory structure mirrored · originals untouched unless you ask.
 </p>
 
 ```bash
-npx pixel-cli optimize ./public
+npx skive-cli optimize ./public
 ```
 
 ```
-$ pixel optimize ./public
+$ skive optimize ./public
 
 Scanning ./public... 340 images found (png, jpeg, webp)
 
@@ -43,17 +43,17 @@ file, no account, no setup.
 
 ```bash
 # one-shot
-npx pixel-cli optimize ./public
+npx skive-cli optimize ./public
 
-# or global (bin is `pixel`)
-npm install -g pixel-cli
-pixel optimize ./public
+# or global (bin is `skive`)
+npm install -g skive-cli
+skive optimize ./public
 ```
 
 ## Usage
 
 ```bash
-pixel optimize <input> [options]
+skive optimize <input> [options]
 ```
 
 `<input>` can be a single image or a directory.
@@ -72,19 +72,19 @@ pixel optimize <input> [options]
 
 ```bash
 # Safe default — writes ./public-optimized
-pixel optimize ./public
+skive optimize ./public
 
 # Preview savings without writing
-pixel optimize ./public --dry-run
+skive optimize ./public --dry-run
 
 # Overwrite the source tree (explicit opt-in)
-pixel optimize ./public --in-place
+skive optimize ./public --in-place
 
 # Single file
-pixel optimize ./hero.png
+skive optimize ./hero.png
 
 # Convert a folder to WebP
-pixel optimize ./public -f webp -o ./public-webp
+skive optimize ./public -f webp -o ./public-webp
 ```
 
 ## Behavior
@@ -103,13 +103,18 @@ pixel optimize ./public -f webp -o ./public-webp
 pnpm install
 pnpm build
 pnpm test
-pnpm pixel optimize ./path/to/images
+pnpm skive optimize ./path/to/images
 ```
 
-Monorepo packages:
+Monorepo packages (current focus: CLI):
 
-- `@pixel/core` — internal optimize engine (private, bundled into the CLI)
-- `pixel-cli` — published CLI (`pixel` binary)
+| Package | Role | Status |
+| --- | --- | --- |
+| `skive-engine` | Shared optimize engine | Published |
+| `skive-cli` | CLI (`skive` binary) | Published |
+| `skive` | Multer-style upload + optimize + storage | Later |
+| `skive-s3` | S3 storage adapter | Later |
+| `skive-gcs` | GCS storage adapter | Later |
 
 ## License
 

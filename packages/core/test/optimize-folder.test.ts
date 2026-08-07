@@ -44,7 +44,7 @@ describe("optimizeFolder", () => {
   });
 
   async function tempDir(): Promise<string> {
-    const dir = await mkdtemp(join(tmpdir(), "pixel-folder-"));
+    const dir = await mkdtemp(join(tmpdir(), "skive-folder-"));
     dirs.push(dir);
     return dir;
   }

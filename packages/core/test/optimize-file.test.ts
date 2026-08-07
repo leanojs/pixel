@@ -44,7 +44,7 @@ describe("optimizeFile", () => {
   });
 
   async function tempDir(): Promise<string> {
-    const dir = await mkdtemp(join(tmpdir(), "pixel-core-"));
+    const dir = await mkdtemp(join(tmpdir(), "skive-engine-"));
     dirs.push(dir);
     return dir;
   }
