@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/leanojs/pixel/main/assets/readme-banner.svg" alt="Skive — optimize image folders in one command" width="100%" />
+  <img src="https://raw.githubusercontent.com/leanojs/pixel/main/assets/readme-banner.png" alt="Skive — optimize image folders in one command" width="100%" />
 </p>
 
 <p align="center">
@@ -58,15 +58,15 @@ skive optimize <input> [options]
 
 `<input>` can be a single image or a directory.
 
-| Flag | Description |
-| --- | --- |
-| `-o, --out <dir>` | Output directory (default: `<input>-optimized`) |
-| `--in-place` | Overwrite files in `<input>` directly |
+| Flag                 | Description                                             |
+| -------------------- | ------------------------------------------------------- |
+| `-o, --out <dir>`    | Output directory (default: `<input>-optimized`)         |
+| `--in-place`         | Overwrite files in `<input>` directly                   |
 | `-f, --format <fmt>` | Convert to `png`, `jpeg`, or `webp` (default: preserve) |
-| `-q, --quality <n>` | Quality override (default: `80`) |
-| `--width <n>` | Resize to width, aspect ratio preserved |
-| `--dry-run` | Report projected savings, write nothing |
-| `--concurrency <n>` | Parallel file limit (default: `4`) |
+| `-q, --quality <n>`  | Quality override (default: `80`)                        |
+| `--width <n>`        | Resize to width, aspect ratio preserved                 |
+| `--dry-run`          | Report projected savings, write nothing                 |
+| `--concurrency <n>`  | Parallel file limit (default: `4`)                      |
 
 ### Examples
 
