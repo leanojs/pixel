@@ -96,9 +96,9 @@ skive optimize ./public -f webp -o ./public-webp
 
 ## Links
 
-- GitHub: [leanojs/pixel](https://github.com/leanojs/skive)
+- GitHub: [leanojs/skive](https://github.com/leanojs/skive)
 - Engine: [`skive-engine`](https://www.npmjs.com/package/skive-engine)
-- Issues: [github.com/leanojs/pixel/issues](https://github.com/leanojs/skive/issues)
+- Issues: [github.com/leanojs/skive/issues](https://github.com/leanojs/skive/issues)
 
 ## License
 
