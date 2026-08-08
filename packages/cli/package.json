@@ -1,18 +1,18 @@
 {
   "name": "skive-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CLI to optimize image folders — format-preserving, structure-preserving, safe by default",
   "type": "module",
   "license": "Apache-2.0",
   "author": "Leano",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leanojs/pixel.git",
+    "url": "git+https://github.com/leanojs/skive.git",
     "directory": "packages/cli"
   },
-  "homepage": "https://github.com/leanojs/pixel#readme",
+  "homepage": "https://github.com/leanojs/skive#readme",
   "bugs": {
-    "url": "https://github.com/leanojs/pixel/issues"
+    "url": "https://github.com/leanojs/skive/issues"
   },
   "keywords": [
     "cli",
